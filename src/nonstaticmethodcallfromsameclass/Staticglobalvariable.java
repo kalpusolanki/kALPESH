@@ -1,0 +1,37 @@
+package nonstaticmethodcallfromsameclass;
+
+public class Staticglobalvariable
+{
+	  static int N1 = 211;
+		public static void main(String[] args) 
+      {
+	
+				
+			System.out.println(N1);	     //1               // variable name in printing statement
+				
+			
+			Staticglobalvariable M2 = new Staticglobalvariable();
+		    System.out.println(M2.N1);	                     //2     //for variable calling we use object name .variable name in printing statement
+				                                               // one object is used when we have to call non static method in same class
+				                                                   // object name which is same .method name
+			M2.S1();   // 3 and 4
+			
+		globalvariableotherclass O3=new globalvariableotherclass();   //5
+			O3.M4();
+    
+      
+      }
+public void S1()
+{
+	System.out.println("42");                           //U can call global variable in other method directly in printing statement but thes method u have to call in main method thats why create an object in amin method
+	
+	System.out.println(N1);                                 // we direct call it global variable in any method via printing statement
+}
+
+public void S2() 
+{
+	System.out.println("43");
+}
+}
+
+
